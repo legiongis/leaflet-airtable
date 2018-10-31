@@ -4,7 +4,7 @@ import os, urllib, json, filecmp, shutil
 airtable_url = "<insert the airtable api url for your table>"
 airtable_key = "<insert your airtable api key>"
 url = "{}?api_key={}".format(airtable_url,airtable_key)
-dest_file = "table-data.json"
+dest_file = os.path.join("example","table-data.json")
 temp_file = dest_file.replace(".json","-tmp.json")
 
 ## retrieve data from airtable and write to file
